@@ -6,6 +6,7 @@ document.getElementById("btn").addEventListener("click", function(event) {
     if (username === ""  || password === "") {
       alert("Credenciales incorrectas. Por favor, inténtalo de nuevo.");
     } else {
+      localStorage.setItem("logeado",true);
       location.replace("index.html");
     }
   });
