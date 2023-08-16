@@ -2,16 +2,6 @@ const CARS = "https://japceibal.github.io/emercado-api/cats_products/101.json";
 
 let categoriesArray = [];
 
-document.addEventListener("DOMContentLoaded", function(e){
-    getJSONData(CARS).then(function(resultObj){
-        if (resultObj.status === "ok")
-        {
-            categoriesArray = resultObj.data;
-            showCategoriesList(categoriesArray.products); 
-        }
-    });
-});
-
 function showCategoriesList(array){
     let htmlContentToAppend = "";
 
@@ -31,7 +21,6 @@ function showCategoriesList(array){
                         </div>
                         <small class="text-muted">` + autos.soldCount + ` artículos</small> 
                     </div>
-
                 </div>
             </div>
         </div>
@@ -39,3 +28,13 @@ function showCategoriesList(array){
         document.getElementById("container").innerHTML = htmlContentToAppend; 
     }
 }
+
+document.addEventListener("DOMContentLoaded", function(e){
+    getJSONData(CARS).then(function(resultObj){
+        if (resultObj.status === "ok")
+        {
+            categoriesArray = resultObj.data;
+            showCategoriesList(categoriesArray.products); 
+        }
+    });
+});
