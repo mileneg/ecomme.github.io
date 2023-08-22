@@ -1,3 +1,3 @@
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("data").innerHTML = localStorage.getItem("ingresado");
+    document.getElementById("profile").innerHTML = localStorage.getItem("logeado");
 });
