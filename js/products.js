@@ -30,7 +30,7 @@ function showCategoriesList(array){
 }
 
 document.addEventListener("DOMContentLoaded", function(e){
-    getJSONData(CARS).then(function(resultObj){
+    getJSONData(ARTICULOS).then(function(resultObj){
         if (resultObj.status === "ok")
         {
             categoriesArray = resultObj.data;
