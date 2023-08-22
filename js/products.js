@@ -37,4 +37,5 @@ document.addEventListener("DOMContentLoaded", function(e){
             showCategoriesList(categoriesArray.products); 
         }
     });
+    document.getElementById("profile").innerHTML = localStorage.getItem("logeado");
 });
