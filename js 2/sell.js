@@ -146,5 +146,4 @@ document.addEventListener("DOMContentLoaded", function(e){
             });
         }
     });
-    document.getElementById("profile").innerHTML = localStorage.getItem("logeado");
 });

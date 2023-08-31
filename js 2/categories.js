@@ -140,6 +140,4 @@ document.addEventListener("DOMContentLoaded", function(e){
 
         showCategoriesList();
     });
-    document.getElementById("profile").innerHTML = localStorage.getItem("logeado");
-
 });

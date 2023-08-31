@@ -38,4 +38,10 @@ let getJSONData = function(url){
         hideSpinner();
         return result;
     });
-}
+};
+
+document.addEventListener("DOMContentLoaded", ()=>{
+  let lista = document.getElementById("navbarNav").getElementsByClassName("nav-item");
+
+  lista[lista.length-1].innerHTML = "<a class=nav-link href=my-profile.html>" +localStorage.getItem("logeado")+ "</a>";
+});
