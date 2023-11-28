@@ -1,5 +1,3 @@
-const ARTICULOS = "https://japceibal.github.io/emercado-api/cats_products/"+localStorage.getItem("catID")+".json"
-
 const ORDER_ASC_BY_PRICE = "$A";
 const ORDER_DESC_BY_PRICE = "$D";
 const ORDER_BY_PROD_SOLDCOUNT = "Sold";
@@ -37,6 +35,11 @@ function sortProducts(criteria, array){
     return result;
 }
 
+function setProductID(id) {
+    localStorage.setItem("productID", id);
+    window.location = "product-info.html"
+}
+
 function showProductsList(array){
     let htmlContentToAppend = "";
 
@@ -47,7 +50,7 @@ function showProductsList(array){
            ((maxCount == undefined) || (maxCount != undefined && parseInt(articulo.cost) <= maxCount))){
        
             htmlContentToAppend += `
-                <div class="list-group-item list-group-item-action">
+                <div onclick="setProductID(${articulo.id})" class="list-group-item list-group-item-action">
                     <div class="row">
                         <div class="col-3">
                             <img src="` + articulo.image + `" alt="product image" class="img-thumbnail">
@@ -79,7 +82,8 @@ function sortAndShowCategories(sortCriteria){
 
 
 document.addEventListener("DOMContentLoaded", function(e){
-    getJSONData(ARTICULOS).then(function(resultObj){
+    getJSONData(PRODUCTS_URL+localStorage.getItem("catID")+".json"
+).then(function(resultObj){
         if (resultObj.status === "ok")
         {
             productsArray = resultObj.data;

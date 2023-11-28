@@ -189,7 +189,6 @@ a.custom-card:hover {
   color: orange;
 }
 
-/*login*/
 .login{
   text-align: center !important;
     margin: 0;
@@ -201,12 +200,104 @@ a.custom-card:hover {
     background-color: #fff;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
-    
+
+}
+
+form {
+  display:block;
+  margin-top: 0em;}
+
+#search-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#search-input {
+    padding: 10px;
+    width: 300px;
+}
+
+#search-results {
+    margin-top: 20px;
+}
+
+.checked {
+  color: orange;
+}
+
+.product-info {
+  margin-left: 10px;
+
+}
+
+.col-3 {
+  width: 300px;
+ 
+
 }
 
 
+/*
+Aca Arranca el carrusel
+*/
+.slider-wrapper {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
 
+}
 
-form {
-    display:block;
-    margin-top: 0em;}
+.slider {
+  display: flex;
+  aspect-ratio: 16 / 9;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 0.25rem .5rem #21212126;
+  border-radius: .5rem;
+
+}
+
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+ 
+.slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+
+}
+
+.slider-nav a {
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  border: 30px;
+  border-color: #212529;
+  background-color: #999898;
+  opacity: .75;
+  transition: opacity ease 250ms; 
+}
+
+.slider-nav a:hover {
+  background-color: #474747;
+  opacity: 100%;
+}
+/*
+ Aca termina el carrusel
+*/
+
+.product-info p {
+  font-weight: 1000;
+}
+
+.form-select {
+  width: 243px;
+}

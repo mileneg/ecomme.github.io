@@ -5,14 +5,15 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>eMercado - Todo lo que busques está aquí</title>
-
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+<div class="product-info"> 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
     <div class="container">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -37,11 +38,28 @@
     </div>
   </nav>
   <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
+    <div id="container">
+    
     </div>
+    <div class="border rounded-3 cont"><br>
+      <h5>COMENTARIOS:</h5><br>
+      <ul class="list-group" id="list">
+      </ul>
+    </div>
+    <div><br>
+      <h6>COMENTAR:</h6>
+    <p>Tu opinión:</p>
+    <textarea name="opinion" id="opinion" cols="30" rows="2"></textarea>
+    <p>Tu puntuación:</p>
+    <select class="form-select" aria-label="Select Category">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select><br>
+    <input type="button" value="Enviar">
+</div>
   </main>
   <footer class="text-muted">
     <div class="container">
@@ -58,6 +76,7 @@
       <div></div>
       <div></div>
     </div>
+  </div>
   </div>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
