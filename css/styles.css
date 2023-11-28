@@ -29,12 +29,13 @@ nav a {
 }
 
 .jumbotron {
+  display: flex;
   height: 50vh;
   padding: 5em inherit;
   margin-bottom: 0;
   background-color: #53C0FB;
   background: url('../img/cover_back.png');
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   color: black;
@@ -200,12 +201,31 @@ a.custom-card:hover {
     background-color: #fff;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
-
 }
 
 form {
   display:block;
-  margin-top: 0em;}
+  margin-top: 0em;
+}
+
+ form div:first-child #foto_perfil{
+  display: none;
+}
+
+form div:first-child #desaparecer {
+  background: #0087F7;
+  color: white;
+  padding: 6px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+form #foto_perfil{
+  padding: 8px 20px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+}
+ 
 
 #search-container {
     text-align: center;
@@ -227,15 +247,11 @@ form {
 
 .product-info {
   margin-left: 10px;
-
 }
 
 .col-3 {
   width: 300px;
- 
-
 }
-
 
 /*
 Aca Arranca el carrusel
@@ -244,7 +260,6 @@ Aca Arranca el carrusel
   position: relative;
   max-width: 500px;
   margin: 0 auto;
-
 }
 
 .slider {
@@ -255,7 +270,6 @@ Aca Arranca el carrusel
   scroll-behavior: smooth;
   box-shadow: 0 0.25rem .5rem #21212126;
   border-radius: .5rem;
-
 }
 
 .slider img {
@@ -272,7 +286,6 @@ Aca Arranca el carrusel
   left: 50%;
   transform: translate(-50%);
   z-index: 1;
-
 }
 
 .slider-nav a {
@@ -290,6 +303,7 @@ Aca Arranca el carrusel
   background-color: #474747;
   opacity: 100%;
 }
+
 /*
  Aca termina el carrusel
 */
@@ -301,3 +315,51 @@ Aca Arranca el carrusel
 .form-select {
   width: 243px;
 }
+
+.dark {
+  background-color: #333 !important;
+  color: #fff;
+  #foto {
+    color: #fff;
+  }
+}
+
+.dropdown-item, .dz-message {
+  background-color: white;
+  color: black;
+}
+
+#img-rela {
+  width: 200px;
+  display: flex;
+  padding-left: 10px;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.related {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+}
+
+#carrito {
+  padding-top: 3vh;
+}
+
+#tipoEnvio {
+  margin-left: 6vh;
+}
+
+#dirEnvio { 
+  margin-left: 6vh;
+}
+
+#agregarCarrito {
+  background-color: #0faf1f;
+  color: #fff;
+  border-radius: 5px;
+}
+
